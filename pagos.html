@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="robots" content="noindex">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="MindBox">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white-translucent">
+    <meta name="theme-color" content="#5b46b2">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://assets.mindbox.app/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://assets.mindbox.app/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="https://assets.mindbox.app/favicon.ico">
+    <meta name="google" content="notranslate">
+    <title>MindBox</title>
+    <link rel="stylesheet" href="https://assets.mindbox.app/css/app.css?id=0cba320f3871b3e75e8c36646fdb2db6">
+    <style>
+        .collapse { display: none; }
+        .collapse.show { display: block; }
+        .dropdown-menu { display: none; }
+        .dropdown-menu.show { display: block; }
+    </style>
+</head>
+<body>
+    <div class="dashboard-page bg-mb-background" id="main-container">
+        <!-- NAVBAR SUPERIOR -->
+        <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top" id="main-navbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand md:hidden" href="inicio.html">
+                        <img src="https://assets.mindbox.app/img/assets/mindbox_alt.svg" alt="MindBox" class="img-logo">
+                    </a>
+                    <button type="button" id="menu-collapse" class="collapse-btn md:hidden">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+                <div class="hidden md:flex nav-content" id="collapse-menu-1">
+                    <div class="school">
+                        <img src="https://storage.mindbox.app/data/mbid_39/school/pxOkd1rS4stlZO4JcONbF58G2Ug8q9TUWfdnipnJ.jpg" alt="Instituto Tecnológico de Chihuahua" class="logo-school">
+                        <span class="title">Instituto Tecnológico de Chihuahua</span>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown" id="user-dropdown">
+                            <a href="javascript:void(0);" class="dropdown-toggle navbar-text" id="user-dropdown-btn">
+                                <div>
+                                    <img alt="Image" class="opacity-100 img-navbar" src="https://assets.mindbox.app/img/assets/user.svg">
+                                </div>
+                                <span>Rodriguez German Oscar Yram</span>
+                            </a>
+                            <ul class="dropdown-menu" id="user-dropdown-menu">
+                                <li><a href="login.html">Cerrar sesión</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar in" id="main-sidebar" role="navigation">
+            <div class="sidebar-outer">
+                <div class="sidebar-logo">
+                    <img src="https://assets.mindbox.app/img/assets/mindbox.svg" alt="MindBox" class="img-logo">
+                </div>
+                <div class="side-menu">
+                    <div class="relative inline-block text-left w-full" id="menu-search-bar">
+                        <input id="menu-search-input" class="w-full py-1.5 px-3 text-sm border-mb-border rounded-md bg-mb-background text-mb-text-primary leading-tight outline-none focus:ring-mb-primary focus:border-mb-primary" placeholder="Buscar en el menú..." type="text">
+                    </div>
+
+                    <div class="elements" id="sidebar-elements">
+                        <div class="item">
+                            <a href="inicio.html" class="item-dropdown flex flex-row items-center">
+                                <i class="mr-2 cs-icon home"></i><span>Inicio</span>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="en_curso.html" class="item-dropdown flex flex-row items-center">
+                                <i class="mr-2 cs-icon courses"></i><span>En curso</span>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#collapse-2" class="item-dropdown flex flex-row items-center toggle-submenu" data-target="collapse-2">
+                                <i class="mr-2 cs-icon personal"></i> Mis datos
+                            </a>
+                            <div class="collapse" id="collapse-2">
+                                <div class="item"><a href="datos_generales.html" class="item-dropdown">Datos generales</a></div>
+                                <div class="item"><a href="datos_socioeconomicos.html" class="item-dropdown">Datos socioeconómicos</a></div>
+                                <div class="item"><a href="datos_facturacion.html" class="item-dropdown">Datos de facturación</a></div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <a href="#collapse-3" class="item-dropdown flex flex-row items-center toggle-submenu" data-target="collapse-3">
+                                <i class="mr-2 cs-icon historic"></i> Histórico
+                            </a>
+                            <div class="collapse" id="collapse-3">
+                                <div class="item"><a href="boletas.html" class="item-dropdown">Boletas</a></div>
+                                <div class="item"><a href="kardex.html" class="item-dropdown">Kardex</a></div>
+                                <div class="item"><a href="avance_reticular.html" class="item-dropdown">Avance reticular</a></div>
+                                <div class="item"><a href="actividades_complementarias.html" class="item-dropdown">Actividades complementarias</a></div>
+                                <div class="item"><a href="adeudos.html" class="item-dropdown">Adeudos</a></div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <a href="#collapse-4" class="item-dropdown flex flex-row items-center toggle-submenu" data-target="collapse-4">
+                                <i class="mr-2 cs-icon repeat"></i> Inscripciones
+                            </a>
+                            <div class="collapse" id="collapse-4">
+                                <div class="item"><a href="inscripcion_info.html" class="item-dropdown">Información</a></div>
+                                <div class="item"><a href="grupos_disponibles.html" class="item-dropdown">Grupos disponibles</a></div>
+                                <div class="item"><a href="materias_verano.html" class="item-dropdown">Materias de verano</a></div>
+                                <div class="item"><a href="seleccion_materias.html" class="item-dropdown">Selección de materias</a></div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <a href="#collapse-5" class="item-dropdown flex flex-row items-center toggle-submenu" data-target="collapse-5">
+                                <i class="mr-2 cs-icon applicants"></i> Evaluaciones
+                            </a>
+                            <div class="collapse" id="collapse-5">
+                                <div class="item"><a href="evaluaciones_realizadas.html" class="item-dropdown">Evaluaciones realizadas</a></div>
+                                <div class="item"><a href="evaluacion_docente.html" class="item-dropdown">Evaluación docente</a></div>
+                                <div class="item"><a href="evaluacion_servicios.html" class="item-dropdown">Evaluación de servicios</a></div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <a href="pagos.html" class="item-dropdown flex flex-row items-center active">
+                                <i class="mr-2 cs-icon payments"></i><span>Pagos</span>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="constancias.html" class="item-dropdown flex flex-row items-center">
+                                <i class="mr-2 cs-icon documents"></i><span>Constancias</span>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#collapse-8" class="item-dropdown flex flex-row items-center toggle-submenu" data-target="collapse-8">
+                                <i class="mr-2 cs-icon options"></i> Opciones
+                            </a>
+                            <div class="collapse" id="collapse-8">
+                                <div class="item"><a href="cambiar_contrasena.html" class="item-dropdown">Cambiar contraseña</a></div>
+                                <div class="item"><a href="login.html" class="item-dropdown">Cerrar sesión</a></div>
+                            </div>
+                        </div>
+
+                        <div class="item hidden lg:block">
+                            <a href="javascript:void(0);" class="item-dropdown flex flex-row items-center" id="close-main-sidebar">
+                                <i class="mr-2 cs-icon arrowl"></i><span>Ocultar menú</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-copy">
+                <a href="https://mindbox.app" target="_blank">MindBox®</a><br>Todos los derechos reservados © 2026.
+            </div>
+        </aside>
+
+        <a href="javascript:void(0);" class="float-button bottom-left in" id="open-main-sidebar" style="display: none;">
+            <i class="mr-2 cs-icon arrowr white h-3 w-3"></i><span>Mostrar menú</span>
+        </a>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <div class="body-container">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <p>No se encontraron pagos realizados o pendientes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Submenús desplegables del sidebar
+        document.querySelectorAll('.toggle-submenu').forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('data-target');
+                const target = document.getElementById(targetId);
+                if (target) target.classList.toggle('show');
+            });
+        });
+
+        // Dropdown de usuario
+        const userBtn = document.getElementById('user-dropdown-btn');
+        const userMenu = document.getElementById('user-dropdown-menu');
+        if (userBtn && userMenu) {
+            userBtn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                userMenu.classList.toggle('show');
+            });
+            document.addEventListener('click', function () {
+                userMenu.classList.remove('show');
+            });
+        }
+
+        // Ocultar / Mostrar sidebar
+        const sidebar = document.getElementById('main-sidebar');
+        const closeBtn = document.getElementById('close-main-sidebar');
+        const openBtn = document.getElementById('open-main-sidebar');
+        const mobileBtn = document.getElementById('menu-collapse');
+
+        if (closeBtn && openBtn && sidebar) {
+            closeBtn.addEventListener('click', () => {
+                sidebar.classList.remove('in');
+                sidebar.style.display = 'none';
+                openBtn.style.display = 'flex';
+            });
+            openBtn.addEventListener('click', () => {
+                sidebar.classList.add('in');
+                sidebar.style.display = '';
+                openBtn.style.display = 'none';
+            });
+        }
+
+        if (mobileBtn && sidebar) {
+            mobileBtn.addEventListener('click', () => {
+                sidebar.classList.toggle('in');
+                sidebar.style.display = sidebar.style.display === 'block' ? '' : 'block';
+            });
+        }
+
+        // Buscador del menú
+        const searchInput = document.getElementById('menu-search-input');
+        if (searchInput) {
+            searchInput.addEventListener('input', function () {
+                const query = this.value.toLowerCase();
+                document.querySelectorAll('#sidebar-elements > .item').forEach(item => {
+                    const text = item.textContent.toLowerCase();
+                    item.style.display = text.includes(query) ? '' : 'none';
+                });
+            });
+        }
+    </script>
+</body>
+</html>
