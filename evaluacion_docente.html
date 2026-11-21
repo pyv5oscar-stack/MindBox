@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="robots" content="noindex">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="MindBox">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white-translucent">
+    <meta name="theme-color" content="#5b46b2">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://assets.mindbox.app/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://assets.mindbox.app/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="https://assets.mindbox.app/favicon.ico">
+    <meta name="google" content="notranslate">
+    <title>MindBox</title>
+    <link rel="stylesheet" href="https://assets.mindbox.app/css/app.css?id=0cba320f3871b3e75e8c36646fdb2db6">
+    <style>
+        .collapse { display: none; }
+        .collapse.show { display: block; }
+        .dropdown-menu { display: none; }
+        .dropdown-menu.show { display: block; }
+    </style>
+</head>
+<body>
+    <div class="dashboard-page bg-mb-background" id="main-container">
+        <!-- NAVBAR SUPERIOR -->
+        <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top" id="main-navbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand md:hidden" href="inicio.html">
+                        <img src="https://assets.mindbox.app/img/assets/mindbox_alt.svg" alt="MindBox" class="img-logo">
+                    </a>
+                    <button type="button" id="menu-collapse" class="collapse-btn md:hidden">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+                <div class="hidden md:flex nav-content" id="collapse-menu-1">
+                    <div class="school">
+                        <img src="https://storage.mindbox.app/data/mbid_39/school/pxOkd1rS4stlZO4JcONbF58G2Ug8q9TUWfdnipnJ.jpg" alt="Instituto Tecnológico de Chihuahua" class="logo-school">
+                        <span class="title">Instituto Tecnológico de Chihuahua</span>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown" id="user-dropdown">
+                            <a href="javascript:void(0);" class="dropdown-toggle navbar-text" id="user-dropdown-btn">
+                                <div>
+                                    <img alt="Image" class="opacity-100 img-navbar" src="https://assets.mindbox.app/img/assets/user.svg">
+                                </div>
+                                <span>Rodriguez German Oscar Yram</span>
+                            </a>
+                            <ul class="dropdown-menu" id="user-dropdown-menu">
+                                <li><a href="login.html">Cerrar sesión</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar in" id="main-sidebar" role="navigation">
+            <div class="sidebar-outer">
+                <div class="sidebar-logo">
+                    <img src="https://assets.mindbox.app/img/assets/mindbox.svg" alt="MindBox" class="img-logo">
+                </div>
+                <div class="side-menu">
+                    <div class="relative inline-block text-left w-full" id="menu-search-bar">
+                        <input id="menu-search-input" class="w-full py-1.5 px-3 text-sm border-mb-border rounded-md bg-mb-background text-mb-text-primary leading-tight outline-none focus:ring-mb-primary focus:border-mb-primary" placeholder="Buscar en el menú..." type="text">
+                    </div>
+
+                    <div class="elements" id="sidebar-elements">
+                        <div class="item">
+                            <a href="inicio.html" class="item-dropdown flex flex-row items-center">
+                                <i class="mr-2 cs-icon home"></i><span>Inicio</span>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="en_curso.html" class="item-dropdown flex flex-row items-center">
+                                <i class="mr-2 cs-icon courses"></i><span>En curso</span>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#collapse-2" class="item-dropdown flex flex-row items-center toggle-submenu" data-target="collapse-2">
+                                <i class="mr-2 cs-icon personal"></i> Mis datos
+                            </a>
+                            <div class="collapse" id="collapse-2">
+                                <div class="item"><a href="datos_generales.html" class="item-dropdown">Datos generales</a></div>
+                                <div class="item"><a href="datos_socioeconomicos.html" class="item-dropdown">Datos socioeconómicos</a></div>
+                                <div class="item"><a href="datos_facturacion.html" class="item-dropdown">Datos de facturación</a></div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <a href="#collapse-3" class="item-dropdown flex flex-row items-center toggle-submenu" data-target="collapse-3">
+                                <i class="mr-2 cs-icon historic"></i> Histórico
+                            </a>
+                            <div class="collapse" id="collapse-3">
+                                <div class="item"><a href="boletas.html" class="item-dropdown">Boletas</a></div>
+                                <div class="item"><a href="kardex.html" class="item-dropdown">Kardex</a></div>
+                                <div class="item"><a href="avance_reticular.html" class="item-dropdown">Avance reticular</a></div>
+                                <div class="item"><a href="actividades_complementarias.html" class="item-dropdown">Actividades complementarias</a></div>
+                                <div class="item"><a href="adeudos.html" class="item-dropdown">Adeudos</a></div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <a href="#collapse-4" class="item-dropdown flex flex-row items-center toggle-submenu" data-target="collapse-4">
+                                <i class="mr-2 cs-icon repeat"></i> Inscripciones
+                            </a>
+                            <div class="collapse" id="collapse-4">
+                                <div class="item"><a href="inscripcion_info.html" class="item-dropdown">Información</a></div>
+                                <div class="item"><a href="grupos_disponibles.html" class="item-dropdown">Grupos disponibles</a></div>
+                                <div class="item"><a href="materias_verano.html" class="item-dropdown">Materias de verano</a></div>
+                                <div class="item"><a href="seleccion_materias.html" class="item-dropdown">Selección de materias</a></div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <a href="#collapse-5" class="item-dropdown flex flex-row items-center toggle-submenu" data-target="collapse-5">
+                                <i class="mr-2 cs-icon applicants"></i> Evaluaciones
+                            </a>
+                            <div class="collapse show" id="collapse-5">
+                                <div class="item"><a href="evaluaciones_realizadas.html" class="item-dropdown">Evaluaciones realizadas</a></div>
+                                <div class="item"><a href="evaluacion_docente.html" class="item-dropdown active">Evaluación docente</a></div>
+                                <div class="item"><a href="evaluacion_servicios.html" class="item-dropdown">Evaluación de servicios</a></div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <a href="pagos.html" class="item-dropdown flex flex-row items-center">
+                                <i class="mr-2 cs-icon payments"></i><span>Pagos</span>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="constancias.html" class="item-dropdown flex flex-row items-center">
+                                <i class="mr-2 cs-icon documents"></i><span>Constancias</span>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#collapse-8" class="item-dropdown flex flex-row items-center toggle-submenu" data-target="collapse-8">
+                                <i class="mr-2 cs-icon options"></i> Opciones
+                            </a>
+                            <div class="collapse" id="collapse-8">
+                                <div class="item"><a href="cambiar_contrasena.html" class="item-dropdown">Cambiar contraseña</a></div>
+                                <div class="item"><a href="login.html" class="item-dropdown">Cerrar sesión</a></div>
+                            </div>
+                        </div>
+
+                        <div class="item hidden lg:block">
+                            <a href="javascript:void(0);" class="item-dropdown flex flex-row items-center" id="close-main-sidebar">
+                                <i class="mr-2 cs-icon arrowl"></i><span>Ocultar menú</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-copy">
+                <a href="https://mindbox.app" target="_blank">MindBox®</a><br>Todos los derechos reservados © 2026.
+            </div>
+        </aside>
+
+        <a href="javascript:void(0);" class="float-button bottom-left in" id="open-main-sidebar" style="display: none;">
+            <i class="mr-2 cs-icon arrowr white h-3 w-3"></i><span>Mostrar menú</span>
+        </a>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <div class="body-container">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h5 class="panel-title">Evaluación docente: Agosto-Diciembre 2026</h5>
+                            </div>
+                            <div class="panel-body">
+                                <p>Te recordamos que tus docentes reciben sus resultados una vez que han reportado sus calificaciones. Toda la información que registres será anónima y confidencial.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="teacher-evaluation">
+                    <div id="eval-errors" role="alert" tabindex="-1" class="alert alert-danger" style="display: none;">
+                        <p>Revisa las respuestas indicadas. Tus respuestas se conservan.</p>
+                        <ul id="eval-errors-list"></ul>
+                    </div>
+                    <div id="eval-success" role="alert" class="alert alert-success" style="display: none;">
+                        Respuestas guardadas para el aspecto actual.
+                    </div>
+
+                    <form id="eval" onsubmit="continuarEvaluacion(event)">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <p class="text-muted" id="aspect-counter">Aspecto a evaluar: 1 de 11</p>
+                                <h6 class="font-bold" id="aspect-title">¿Domina los principios, fundamentos y conceptos de la disciplina que imparte en el curso?</h6>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- Lara Rodriguez Amado - Cálculo Diferencial -->
+                            <div class="col-xl-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <div class="flex flex-row items-start md:items-center">
+                                            <div><img src="https://assets.mindbox.app/img/assets/user.svg" alt="" class="rounded-full h-8"></div>
+                                            <div class="ml-2"><span>Lara Rodriguez Amado</span> - <span class="text-mb-primary">Cálculo Diferencial</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <fieldset data-question="1">
+                                            <legend class="text-sm font-bold">1 - Explica de manera clara los contenidos de la asignatura.</legend>
+                                            <div class="flex flex-row items-center justify-evenly w-full mb-3 border border-solid border-mb-border rounded-lg">
+                                                <label for="answer-790859-1-1" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente en desacuerdo">😡</span><input id="answer-790859-1-1" name="answer[790859][1]" type="radio" class="sr-only" value="1"></label>
+                                                <label for="answer-790859-1-2" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="En desacuerdo">😟</span><input id="answer-790859-1-2" name="answer[790859][1]" type="radio" class="sr-only" value="2"></label>
+                                                <label for="answer-790859-1-3" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Indeciso">🤔</span><input id="answer-790859-1-3" name="answer[790859][1]" type="radio" class="sr-only" value="3"></label>
+                                                <label for="answer-790859-1-4" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="De acuerdo">🙂</span><input id="answer-790859-1-4" name="answer[790859][1]" type="radio" class="sr-only" value="4"></label>
+                                                <label for="answer-790859-1-5" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente de acuerdo">😀</span><input id="answer-790859-1-5" name="answer[790859][1]" type="radio" class="sr-only" value="5"></label>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset data-question="2">
+                                            <legend class="text-sm font-bold">2 - Relaciona los contenidos de la asignatura con los contenidos de otras.</legend>
+                                            <div class="flex flex-row items-center justify-evenly w-full mb-3 border border-solid border-mb-border rounded-lg">
+                                                <label for="answer-790859-2-1" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente en desacuerdo">😡</span><input id="answer-790859-2-1" name="answer[790859][2]" type="radio" class="sr-only" value="1"></label>
+                                                <label for="answer-790859-2-2" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="En desacuerdo">😟</span><input id="answer-790859-2-2" name="answer[790859][2]" type="radio" class="sr-only" value="2"></label>
+                                                <label for="answer-790859-2-3" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Indeciso">🤔</span><input id="answer-790859-2-3" name="answer[790859][2]" type="radio" class="sr-only" value="3"></label>
+                                                <label for="answer-790859-2-4" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="De acuerdo">🙂</span><input id="answer-790859-2-4" name="answer[790859][2]" type="radio" class="sr-only" value="4"></label>
+                                                <label for="answer-790859-2-5" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente de acuerdo">😀</span><input id="answer-790859-2-5" name="answer[790859][2]" type="radio" class="sr-only" value="5"></label>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset data-question="3">
+                                            <legend class="text-sm font-bold">3 - Resuelve las dudas relacionadas con los contenidos de la asignatura.</legend>
+                                            <div class="flex flex-row items-center justify-evenly w-full mb-3 border border-solid border-mb-border rounded-lg">
+                                                <label for="answer-790859-3-1" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente en desacuerdo">😡</span><input id="answer-790859-3-1" name="answer[790859][3]" type="radio" class="sr-only" value="1"></label>
+                                                <label for="answer-790859-3-2" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="En desacuerdo">😟</span><input id="answer-790859-3-2" name="answer[790859][3]" type="radio" class="sr-only" value="2"></label>
+                                                <label for="answer-790859-3-3" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Indeciso">🤔</span><input id="answer-790859-3-3" name="answer[790859][3]" type="radio" class="sr-only" value="3"></label>
+                                                <label for="answer-790859-3-4" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="De acuerdo">🙂</span><input id="answer-790859-3-4" name="answer[790859][3]" type="radio" class="sr-only" value="4"></label>
+                                                <label for="answer-790859-3-5" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente de acuerdo">😀</span><input id="answer-790859-3-5" name="answer[790859][3]" type="radio" class="sr-only" value="5"></label>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset data-question="4">
+                                            <legend class="text-sm font-bold">4 - Propone ejemplos o ejercicios que vinculan la asignatura con la práctica profesional.</legend>
+                                            <div class="flex flex-row items-center justify-evenly w-full mb-3 border border-solid border-mb-border rounded-lg">
+                                                <label for="answer-790859-4-1" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente en desacuerdo">😡</span><input id="answer-790859-4-1" name="answer[790859][4]" type="radio" class="sr-only" value="1"></label>
+                                                <label for="answer-790859-4-2" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="En desacuerdo">😟</span><input id="answer-790859-4-2" name="answer[790859][4]" type="radio" class="sr-only" value="2"></label>
+                                                <label for="answer-790859-4-3" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Indeciso">🤔</span><input id="answer-790859-4-3" name="answer[790859][4]" type="radio" class="sr-only" value="3"></label>
+                                                <label for="answer-790859-4-4" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="De acuerdo">🙂</span><input id="answer-790859-4-4" name="answer[790859][4]" type="radio" class="sr-only" value="4"></label>
+                                                <label for="answer-790859-4-5" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente de acuerdo">😀</span><input id="answer-790859-4-5" name="answer[790859][4]" type="radio" class="sr-only" value="5"></label>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset data-question="5">
+                                            <legend class="text-sm font-bold">5 - Explica la utilidad de los contenidos teóricos y prácticos para la actividad profesional.</legend>
+                                            <div class="flex flex-row items-center justify-evenly w-full mb-3 border border-solid border-mb-border rounded-lg">
+                                                <label for="answer-790859-5-1" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente en desacuerdo">😡</span><input id="answer-790859-5-1" name="answer[790859][5]" type="radio" class="sr-only" value="1"></label>
+                                                <label for="answer-790859-5-2" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="En desacuerdo">😟</span><input id="answer-790859-5-2" name="answer[790859][5]" type="radio" class="sr-only" value="2"></label>
+                                                <label for="answer-790859-5-3" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Indeciso">🤔</span><input id="answer-790859-5-3" name="answer[790859][5]" type="radio" class="sr-only" value="3"></label>
+                                                <label for="answer-790859-5-4" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="De acuerdo">🙂</span><input id="answer-790859-5-4" name="answer[790859][5]" type="radio" class="sr-only" value="4"></label>
+                                                <label for="answer-790859-5-5" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente de acuerdo">😀</span><input id="answer-790859-5-5" name="answer[790859][5]" type="radio" class="sr-only" value="5"></label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Chavez Esquivel Daniel - Dibujo Asistido Por Computadora -->
+                            <div class="col-xl-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <div class="flex flex-row items-start md:items-center">
+                                            <div><img src="https://assets.mindbox.app/img/assets/user.svg" alt="" class="rounded-full h-8"></div>
+                                            <div class="ml-2"><span>Chavez Esquivel Daniel</span> - <span class="text-mb-primary">Dibujo Asistido Por Computadora</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <fieldset data-question="1">
+                                            <legend class="text-sm font-bold">1 - Explica de manera clara los contenidos de la asignatura.</legend>
+                                            <div class="flex flex-row items-center justify-evenly w-full mb-3 border border-solid border-mb-border rounded-lg">
+                                                <label for="answer-790861-1-1" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente en desacuerdo">😡</span><input id="answer-790861-1-1" name="answer[790861][1]" type="radio" class="sr-only" value="1"></label>
+                                                <label for="answer-790861-1-2" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="En desacuerdo">😟</span><input id="answer-790861-1-2" name="answer[790861][1]" type="radio" class="sr-only" value="2"></label>
+                                                <label for="answer-790861-1-3" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Indeciso">🤔</span><input id="answer-790861-1-3" name="answer[790861][1]" type="radio" class="sr-only" value="3"></label>
+                                                <label for="answer-790861-1-4" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="De acuerdo">🙂</span><input id="answer-790861-1-4" name="answer[790861][1]" type="radio" class="sr-only" value="4"></label>
+                                                <label for="answer-790861-1-5" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente de acuerdo">😀</span><input id="answer-790861-1-5" name="answer[790861][1]" type="radio" class="sr-only" value="5"></label>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset data-question="2">
+                                            <legend class="text-sm font-bold">2 - Relaciona los contenidos de la asignatura con los contenidos de otras.</legend>
+                                            <div class="flex flex-row items-center justify-evenly w-full mb-3 border border-solid border-mb-border rounded-lg">
+                                                <label for="answer-790861-2-1" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente en desacuerdo">😡</span><input id="answer-790861-2-1" name="answer[790861][2]" type="radio" class="sr-only" value="1"></label>
+                                                <label for="answer-790861-2-2" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="En desacuerdo">😟</span><input id="answer-790861-2-2" name="answer[790861][2]" type="radio" class="sr-only" value="2"></label>
+                                                <label for="answer-790861-2-3" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Indeciso">🤔</span><input id="answer-790861-2-3" name="answer[790861][2]" type="radio" class="sr-only" value="3"></label>
+                                                <label for="answer-790861-2-4" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="De acuerdo">🙂</span><input id="answer-790861-2-4" name="answer[790861][2]" type="radio" class="sr-only" value="4"></label>
+                                                <label for="answer-790861-2-5" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente de acuerdo">😀</span><input id="answer-790861-2-5" name="answer[790861][2]" type="radio" class="sr-only" value="5"></label>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset data-question="3">
+                                            <legend class="text-sm font-bold">3 - Resuelve las dudas relacionadas con los contenidos de la asignatura.</legend>
+                                            <div class="flex flex-row items-center justify-evenly w-full mb-3 border border-solid border-mb-border rounded-lg">
+                                                <label for="answer-790861-3-1" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente en desacuerdo">😡</span><input id="answer-790861-3-1" name="answer[790861][3]" type="radio" class="sr-only" value="1"></label>
+                                                <label for="answer-790861-3-2" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="En desacuerdo">😟</span><input id="answer-790861-3-2" name="answer[790861][3]" type="radio" class="sr-only" value="2"></label>
+                                                <label for="answer-790861-3-3" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Indeciso">🤔</span><input id="answer-790861-3-3" name="answer[790861][3]" type="radio" class="sr-only" value="3"></label>
+                                                <label for="answer-790861-3-4" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="De acuerdo">🙂</span><input id="answer-790861-3-4" name="answer[790861][3]" type="radio" class="sr-only" value="4"></label>
+                                                <label for="answer-790861-3-5" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente de acuerdo">😀</span><input id="answer-790861-3-5" name="answer[790861][3]" type="radio" class="sr-only" value="5"></label>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset data-question="4">
+                                            <legend class="text-sm font-bold">4 - Propone ejemplos o ejercicios que vinculan la asignatura con la práctica profesional.</legend>
+                                            <div class="flex flex-row items-center justify-evenly w-full mb-3 border border-solid border-mb-border rounded-lg">
+                                                <label for="answer-790861-4-1" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente en desacuerdo">😡</span><input id="answer-790861-4-1" name="answer[790861][4]" type="radio" class="sr-only" value="1"></label>
+                                                <label for="answer-790861-4-2" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="En desacuerdo">😟</span><input id="answer-790861-4-2" name="answer[790861][4]" type="radio" class="sr-only" value="2"></label>
+                                                <label for="answer-790861-4-3" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Indeciso">🤔</span><input id="answer-790861-4-3" name="answer[790861][4]" type="radio" class="sr-only" value="3"></label>
+                                                <label for="answer-790861-4-4" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="De acuerdo">🙂</span><input id="answer-790861-4-4" name="answer[790861][4]" type="radio" class="sr-only" value="4"></label>
+                                                <label for="answer-790861-4-5" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente de acuerdo">😀</span><input id="answer-790861-4-5" name="answer[790861][4]" type="radio" class="sr-only" value="5"></label>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset data-question="5">
+                                            <legend class="text-sm font-bold">5 - Explica la utilidad de los contenidos teóricos y prácticos para la actividad profesional.</legend>
+                                            <div class="flex flex-row items-center justify-evenly w-full mb-3 border border-solid border-mb-border rounded-lg">
+                                                <label for="answer-790861-5-1" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente en desacuerdo">😡</span><input id="answer-790861-5-1" name="answer[790861][5]" type="radio" class="sr-only" value="1"></label>
+                                                <label for="answer-790861-5-2" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="En desacuerdo">😟</span><input id="answer-790861-5-2" name="answer[790861][5]" type="radio" class="sr-only" value="2"></label>
+                                                <label for="answer-790861-5-3" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Indeciso">🤔</span><input id="answer-790861-5-3" name="answer[790861][5]" type="radio" class="sr-only" value="3"></label>
+                                                <label for="answer-790861-5-4" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="De acuerdo">🙂</span><input id="answer-790861-5-4" name="answer[790861][5]" type="radio" class="sr-only" value="4"></label>
+                                                <label for="answer-790861-5-5" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente de acuerdo">😀</span><input id="answer-790861-5-5" name="answer[790861][5]" type="radio" class="sr-only" value="5"></label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Escobedo Portillo Alberto - Fundamentos De Investigación -->
+                            <div class="col-xl-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <div class="flex flex-row items-start md:items-center">
+                                            <div><img src="https://assets.mindbox.app/img/assets/user.svg" alt="" class="rounded-full h-8"></div>
+                                            <div class="ml-2"><span>Escobedo Portillo Alberto</span> - <span class="text-mb-primary">Fundamentos De Investigación</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <fieldset data-question="1">
+                                            <legend class="text-sm font-bold">1 - Explica de manera clara los contenidos de la asignatura.</legend>
+                                            <div class="flex flex-row items-center justify-evenly w-full mb-3 border border-solid border-mb-border rounded-lg">
+                                                <label for="answer-790863-1-1" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente en desacuerdo">😡</span><input id="answer-790863-1-1" name="answer[790863][1]" type="radio" class="sr-only" value="1"></label>
+                                                <label for="answer-790863-1-2" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="En desacuerdo">😟</span><input id="answer-790863-1-2" name="answer[790863][1]" type="radio" class="sr-only" value="2"></label>
+                                                <label for="answer-790863-1-3" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Indeciso">🤔</span><input id="answer-790863-1-3" name="answer[790863][1]" type="radio" class="sr-only" value="3"></label>
+                                                <label for="answer-790863-1-4" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="De acuerdo">🙂</span><input id="answer-790863-1-4" name="answer[790863][1]" type="radio" class="sr-only" value="4"></label>
+                                                <label for="answer-790863-1-5" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente de acuerdo">😀</span><input id="answer-790863-1-5" name="answer[790863][1]" type="radio" class="sr-only" value="5"></label>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset data-question="2">
+                                            <legend class="text-sm font-bold">2 - Relaciona los contenidos de la asignatura con los contenidos de otras.</legend>
+                                            <div class="flex flex-row items-center justify-evenly w-full mb-3 border border-solid border-mb-border rounded-lg">
+                                                <label for="answer-790863-2-1" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente en desacuerdo">😡</span><input id="answer-790863-2-1" name="answer[790863][2]" type="radio" class="sr-only" value="1"></label>
+                                                <label for="answer-790863-2-2" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="En desacuerdo">😟</span><input id="answer-790863-2-2" name="answer[790863][2]" type="radio" class="sr-only" value="2"></label>
+                                                <label for="answer-790863-2-3" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Indeciso">🤔</span><input id="answer-790863-2-3" name="answer[790863][2]" type="radio" class="sr-only" value="3"></label>
+                                                <label for="answer-790863-2-4" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="De acuerdo">🙂</span><input id="answer-790863-2-4" name="answer[790863][2]" type="radio" class="sr-only" value="4"></label>
+                                                <label for="answer-790863-2-5" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente de acuerdo">😀</span><input id="answer-790863-2-5" name="answer[790863][2]" type="radio" class="sr-only" value="5"></label>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset data-question="3">
+                                            <legend class="text-sm font-bold">3 - Resuelve las dudas relacionadas con los contenidos de la asignatura.</legend>
+                                            <div class="flex flex-row items-center justify-evenly w-full mb-3 border border-solid border-mb-border rounded-lg">
+                                                <label for="answer-790863-3-1" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente en desacuerdo">😡</span><input id="answer-790863-3-1" name="answer[790863][3]" type="radio" class="sr-only" value="1"></label>
+                                                <label for="answer-790863-3-2" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="En desacuerdo">😟</span><input id="answer-790863-3-2" name="answer[790863][3]" type="radio" class="sr-only" value="2"></label>
+                                                <label for="answer-790863-3-3" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Indeciso">🤔</span><input id="answer-790863-3-3" name="answer[790863][3]" type="radio" class="sr-only" value="3"></label>
+                                                <label for="answer-790863-3-4" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="De acuerdo">🙂</span><input id="answer-790863-3-4" name="answer[790863][3]" type="radio" class="sr-only" value="4"></label>
+                                                <label for="answer-790863-3-5" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente de acuerdo">😀</span><input id="answer-790863-3-5" name="answer[790863][3]" type="radio" class="sr-only" value="5"></label>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset data-question="4">
+                                            <legend class="text-sm font-bold">4 - Propone ejemplos o ejercicios que vinculan la asignatura con la práctica profesional.</legend>
+                                            <div class="flex flex-row items-center justify-evenly w-full mb-3 border border-solid border-mb-border rounded-lg">
+                                                <label for="answer-790863-4-1" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente en desacuerdo">😡</span><input id="answer-790863-4-1" name="answer[790863][4]" type="radio" class="sr-only" value="1"></label>
+                                                <label for="answer-790863-4-2" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="En desacuerdo">😟</span><input id="answer-790863-4-2" name="answer[790863][4]" type="radio" class="sr-only" value="2"></label>
+                                                <label for="answer-790863-4-3" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Indeciso">🤔</span><input id="answer-790863-4-3" name="answer[790863][4]" type="radio" class="sr-only" value="3"></label>
+                                                <label for="answer-790863-4-4" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="De acuerdo">🙂</span><input id="answer-790863-4-4" name="answer[790863][4]" type="radio" class="sr-only" value="4"></label>
+                                                <label for="answer-790863-4-5" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente de acuerdo">😀</span><input id="answer-790863-4-5" name="answer[790863][4]" type="radio" class="sr-only" value="5"></label>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset data-question="5">
+                                            <legend class="text-sm font-bold">5 - Explica la utilidad de los contenidos teóricos y prácticos para la actividad profesional.</legend>
+                                            <div class="flex flex-row items-center justify-evenly w-full mb-3 border border-solid border-mb-border rounded-lg">
+                                                <label for="answer-790863-5-1" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente en desacuerdo">😡</span><input id="answer-790863-5-1" name="answer[790863][5]" type="radio" class="sr-only" value="1"></label>
+                                                <label for="answer-790863-5-2" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="En desacuerdo">😟</span><input id="answer-790863-5-2" name="answer[790863][5]" type="radio" class="sr-only" value="2"></label>
+                                                <label for="answer-790863-5-3" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Indeciso">🤔</span><input id="answer-790863-5-3" name="answer[790863][5]" type="radio" class="sr-only" value="3"></label>
+                                                <label for="answer-790863-5-4" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="De acuerdo">🙂</span><input id="answer-790863-5-4" name="answer[790863][5]" type="radio" class="sr-only" value="4"></label>
+                                                <label for="answer-790863-5-5" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente de acuerdo">😀</span><input id="answer-790863-5-5" name="answer[790863][5]" type="radio" class="sr-only" value="5"></label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Bejar Sanchez Humberto Arturo - Metrología Y Normalización -->
+                            <div class="col-xl-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <div class="flex flex-row items-start md:items-center">
+                                            <div><img src="https://assets.mindbox.app/img/assets/user.svg" alt="" class="rounded-full h-8"></div>
+                                            <div class="ml-2"><span>Bejar Sanchez Humberto Arturo</span> - <span class="text-mb-primary">Metrología Y Normalización</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <fieldset data-question="1">
+                                            <legend class="text-sm font-bold">1 - Explica de manera clara los contenidos de la asignatura.</legend>
+                                            <div class="flex flex-row items-center justify-evenly w-full mb-3 border border-solid border-mb-border rounded-lg">
+                                                <label for="answer-790862-1-1" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente en desacuerdo">😡</span><input id="answer-790862-1-1" name="answer[790862][1]" type="radio" class="sr-only" value="1"></label>
+                                                <label for="answer-790862-1-2" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="En desacuerdo">😟</span><input id="answer-790862-1-2" name="answer[790862][1]" type="radio" class="sr-only" value="2"></label>
+                                                <label for="answer-790862-1-3" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Indeciso">🤔</span><input id="answer-790862-1-3" name="answer[790862][1]" type="radio" class="sr-only" value="3"></label>
+                                                <label for="answer-790862-1-4" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="De acuerdo">🙂</span><input id="answer-790862-1-4" name="answer[790862][1]" type="radio" class="sr-only" value="4"></label>
+                                                <label for="answer-790862-1-5" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente de acuerdo">😀</span><input id="answer-790862-1-5" name="answer[790862][1]" type="radio" class="sr-only" value="5"></label>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset data-question="2">
+                                            <legend class="text-sm font-bold">2 - Relaciona los contenidos de la asignatura con los contenidos de otras.</legend>
+                                            <div class="flex flex-row items-center justify-evenly w-full mb-3 border border-solid border-mb-border rounded-lg">
+                                                <label for="answer-790862-2-1" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente en desacuerdo">😡</span><input id="answer-790862-2-1" name="answer[790862][2]" type="radio" class="sr-only" value="1"></label>
+                                                <label for="answer-790862-2-2" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="En desacuerdo">😟</span><input id="answer-790862-2-2" name="answer[790862][2]" type="radio" class="sr-only" value="2"></label>
+                                                <label for="answer-790862-2-3" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Indeciso">🤔</span><input id="answer-790862-2-3" name="answer[790862][2]" type="radio" class="sr-only" value="3"></label>
+                                                <label for="answer-790862-2-4" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="De acuerdo">🙂</span><input id="answer-790862-2-4" name="answer[790862][2]" type="radio" class="sr-only" value="4"></label>
+                                                <label for="answer-790862-2-5" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente de acuerdo">😀</span><input id="answer-790862-2-5" name="answer[790862][2]" type="radio" class="sr-only" value="5"></label>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset data-question="3">
+                                            <legend class="text-sm font-bold">3 - Resuelve las dudas relacionadas con los contenidos de la asignatura.</legend>
+                                            <div class="flex flex-row items-center justify-evenly w-full mb-3 border border-solid border-mb-border rounded-lg">
+                                                <label for="answer-790862-3-1" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente en desacuerdo">😡</span><input id="answer-790862-3-1" name="answer[790862][3]" type="radio" class="sr-only" value="1"></label>
+                                                <label for="answer-790862-3-2" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="En desacuerdo">😟</span><input id="answer-790862-3-2" name="answer[790862][3]" type="radio" class="sr-only" value="2"></label>
+                                                <label for="answer-790862-3-3" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Indeciso">🤔</span><input id="answer-790862-3-3" name="answer[790862][3]" type="radio" class="sr-only" value="3"></label>
+                                                <label for="answer-790862-3-4" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="De acuerdo">🙂</span><input id="answer-790862-3-4" name="answer[790862][3]" type="radio" class="sr-only" value="4"></label>
+                                                <label for="answer-790862-3-5" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente de acuerdo">😀</span><input id="answer-790862-3-5" name="answer[790862][3]" type="radio" class="sr-only" value="5"></label>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset data-question="4">
+                                            <legend class="text-sm font-bold">4 - Propone ejemplos o ejercicios que vinculan la asignatura con la práctica profesional.</legend>
+                                            <div class="flex flex-row items-center justify-evenly w-full mb-3 border border-solid border-mb-border rounded-lg">
+                                                <label for="answer-790862-4-1" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente en desacuerdo">😡</span><input id="answer-790862-4-1" name="answer[790862][4]" type="radio" class="sr-only" value="1"></label>
+                                                <label for="answer-790862-4-2" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="En desacuerdo">😟</span><input id="answer-790862-4-2" name="answer[790862][4]" type="radio" class="sr-only" value="2"></label>
+                                                <label for="answer-790862-4-3" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Indeciso">🤔</span><input id="answer-790862-4-3" name="answer[790862][4]" type="radio" class="sr-only" value="3"></label>
+                                                <label for="answer-790862-4-4" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="De acuerdo">🙂</span><input id="answer-790862-4-4" name="answer[790862][4]" type="radio" class="sr-only" value="4"></label>
+                                                <label for="answer-790862-4-5" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente de acuerdo">😀</span><input id="answer-790862-4-5" name="answer[790862][4]" type="radio" class="sr-only" value="5"></label>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset data-question="5">
+                                            <legend class="text-sm font-bold">5 - Explica la utilidad de los contenidos teóricos y prácticos para la actividad profesional.</legend>
+                                            <div class="flex flex-row items-center justify-evenly w-full mb-3 border border-solid border-mb-border rounded-lg">
+                                                <label for="answer-790862-5-1" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente en desacuerdo">😡</span><input id="answer-790862-5-1" name="answer[790862][5]" type="radio" class="sr-only" value="1"></label>
+                                                <label for="answer-790862-5-2" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="En desacuerdo">😟</span><input id="answer-790862-5-2" name="answer[790862][5]" type="radio" class="sr-only" value="2"></label>
+                                                <label for="answer-790862-5-3" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Indeciso">🤔</span><input id="answer-790862-5-3" name="answer[790862][5]" type="radio" class="sr-only" value="3"></label>
+                                                <label for="answer-790862-5-4" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="De acuerdo">🙂</span><input id="answer-790862-5-4" name="answer[790862][5]" type="radio" class="sr-only" value="4"></label>
+                                                <label for="answer-790862-5-5" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente de acuerdo">😀</span><input id="answer-790862-5-5" name="answer[790862][5]" type="radio" class="sr-only" value="5"></label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Manzanera Quintana Consuelo Bertha - Química -->
+                            <div class="col-xl-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <div class="flex flex-row items-start md:items-center">
+                                            <div><img src="https://assets.mindbox.app/img/assets/user.svg" alt="" class="rounded-full h-8"></div>
+                                            <div class="ml-2"><span>Manzanera Quintana Consuelo Bertha</span> - <span class="text-mb-primary">Química</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <fieldset data-question="1">
+                                            <legend class="text-sm font-bold">1 - Explica de manera clara los contenidos de la asignatura.</legend>
+                                            <div class="flex flex-row items-center justify-evenly w-full mb-3 border border-solid border-mb-border rounded-lg">
+                                                <label for="answer-790858-1-1" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente en desacuerdo">😡</span><input id="answer-790858-1-1" name="answer[790858][1]" type="radio" class="sr-only" value="1"></label>
+                                                <label for="answer-790858-1-2" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="En desacuerdo">😟</span><input id="answer-790858-1-2" name="answer[790858][1]" type="radio" class="sr-only" value="2"></label>
+                                                <label for="answer-790858-1-3" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Indeciso">🤔</span><input id="answer-790858-1-3" name="answer[790858][1]" type="radio" class="sr-only" value="3"></label>
+                                                <label for="answer-790858-1-4" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="De acuerdo">🙂</span><input id="answer-790858-1-4" name="answer[790858][1]" type="radio" class="sr-only" value="4"></label>
+                                                <label for="answer-790858-1-5" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente de acuerdo">😀</span><input id="answer-790858-1-5" name="answer[790858][1]" type="radio" class="sr-only" value="5"></label>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset data-question="2">
+                                            <legend class="text-sm font-bold">2 - Relaciona los contenidos de la asignatura con los contenidos de otras.</legend>
+                                            <div class="flex flex-row items-center justify-evenly w-full mb-3 border border-solid border-mb-border rounded-lg">
+                                                <label for="answer-790858-2-1" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente en desacuerdo">😡</span><input id="answer-790858-2-1" name="answer[790858][2]" type="radio" class="sr-only" value="1"></label>
+                                                <label for="answer-790858-2-2" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="En desacuerdo">😟</span><input id="answer-790858-2-2" name="answer[790858][2]" type="radio" class="sr-only" value="2"></label>
+                                                <label for="answer-790858-2-3" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Indeciso">🤔</span><input id="answer-790858-2-3" name="answer[790858][2]" type="radio" class="sr-only" value="3"></label>
+                                                <label for="answer-790858-2-4" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="De acuerdo">🙂</span><input id="answer-790858-2-4" name="answer[790858][2]" type="radio" class="sr-only" value="4"></label>
+                                                <label for="answer-790858-2-5" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente de acuerdo">😀</span><input id="answer-790858-2-5" name="answer[790858][2]" type="radio" class="sr-only" value="5"></label>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset data-question="3">
+                                            <legend class="text-sm font-bold">3 - Resuelve las dudas relacionadas con los contenidos de la asignatura.</legend>
+                                            <div class="flex flex-row items-center justify-evenly w-full mb-3 border border-solid border-mb-border rounded-lg">
+                                                <label for="answer-790858-3-1" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente en desacuerdo">😡</span><input id="answer-790858-3-1" name="answer[790858][3]" type="radio" class="sr-only" value="1"></label>
+                                                <label for="answer-790858-3-2" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="En desacuerdo">😟</span><input id="answer-790858-3-2" name="answer[790858][3]" type="radio" class="sr-only" value="2"></label>
+                                                <label for="answer-790858-3-3" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Indeciso">🤔</span><input id="answer-790858-3-3" name="answer[790858][3]" type="radio" class="sr-only" value="3"></label>
+                                                <label for="answer-790858-3-4" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="De acuerdo">🙂</span><input id="answer-790858-3-4" name="answer[790858][3]" type="radio" class="sr-only" value="4"></label>
+                                                <label for="answer-790858-3-5" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente de acuerdo">😀</span><input id="answer-790858-3-5" name="answer[790858][3]" type="radio" class="sr-only" value="5"></label>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset data-question="4">
+                                            <legend class="text-sm font-bold">4 - Propone ejemplos o ejercicios que vinculan la asignatura con la práctica profesional.</legend>
+                                            <div class="flex flex-row items-center justify-evenly w-full mb-3 border border-solid border-mb-border rounded-lg">
+                                                <label for="answer-790858-4-1" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente en desacuerdo">😡</span><input id="answer-790858-4-1" name="answer[790858][4]" type="radio" class="sr-only" value="1"></label>
+                                                <label for="answer-790858-4-2" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="En desacuerdo">😟</span><input id="answer-790858-4-2" name="answer[790858][4]" type="radio" class="sr-only" value="2"></label>
+                                                <label for="answer-790858-4-3" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Indeciso">🤔</span><input id="answer-790858-4-3" name="answer[790858][4]" type="radio" class="sr-only" value="3"></label>
+                                                <label for="answer-790858-4-4" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="De acuerdo">🙂</span><input id="answer-790858-4-4" name="answer[790858][4]" type="radio" class="sr-only" value="4"></label>
+                                                <label for="answer-790858-4-5" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente de acuerdo">😀</span><input id="answer-790858-4-5" name="answer[790858][4]" type="radio" class="sr-only" value="5"></label>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset data-question="5">
+                                            <legend class="text-sm font-bold">5 - Explica la utilidad de los contenidos teóricos y prácticos para la actividad profesional.</legend>
+                                            <div class="flex flex-row items-center justify-evenly w-full mb-3 border border-solid border-mb-border rounded-lg">
+                                                <label for="answer-790858-5-1" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente en desacuerdo">😡</span><input id="answer-790858-5-1" name="answer[790858][5]" type="radio" class="sr-only" value="1"></label>
+                                                <label for="answer-790858-5-2" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="En desacuerdo">😟</span><input id="answer-790858-5-2" name="answer[790858][5]" type="radio" class="sr-only" value="2"></label>
+                                                <label for="answer-790858-5-3" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Indeciso">🤔</span><input id="answer-790858-5-3" name="answer[790858][5]" type="radio" class="sr-only" value="3"></label>
+                                                <label for="answer-790858-5-4" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="De acuerdo">🙂</span><input id="answer-790858-5-4" name="answer[790858][5]" type="radio" class="sr-only" value="4"></label>
+                                                <label for="answer-790858-5-5" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente de acuerdo">😀</span><input id="answer-790858-5-5" name="answer[790858][5]" type="radio" class="sr-only" value="5"></label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Garcia Bueno Niza Verenice - Taller De Ética -->
+                            <div class="col-xl-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <div class="flex flex-row items-start md:items-center">
+                                            <div><img src="https://assets.mindbox.app/img/assets/user.svg" alt="" class="rounded-full h-8"></div>
+                                            <div class="ml-2"><span>Garcia Bueno Niza Verenice</span> - <span class="text-mb-primary">Taller De Ética</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <fieldset data-question="1">
+                                            <legend class="text-sm font-bold">1 - Explica de manera clara los contenidos de la asignatura.</legend>
+                                            <div class="flex flex-row items-center justify-evenly w-full mb-3 border border-solid border-mb-border rounded-lg">
+                                                <label for="answer-790860-1-1" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente en desacuerdo">😡</span><input id="answer-790860-1-1" name="answer[790860][1]" type="radio" class="sr-only" value="1"></label>
+                                                <label for="answer-790860-1-2" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="En desacuerdo">😟</span><input id="answer-790860-1-2" name="answer[790860][1]" type="radio" class="sr-only" value="2"></label>
+                                                <label for="answer-790860-1-3" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Indeciso">🤔</span><input id="answer-790860-1-3" name="answer[790860][1]" type="radio" class="sr-only" value="3"></label>
+                                                <label for="answer-790860-1-4" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="De acuerdo">🙂</span><input id="answer-790860-1-4" name="answer[790860][1]" type="radio" class="sr-only" value="4"></label>
+                                                <label for="answer-790860-1-5" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente de acuerdo">😀</span><input id="answer-790860-1-5" name="answer[790860][1]" type="radio" class="sr-only" value="5"></label>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset data-question="2">
+                                            <legend class="text-sm font-bold">2 - Relaciona los contenidos de la asignatura con los contenidos de otras.</legend>
+                                            <div class="flex flex-row items-center justify-evenly w-full mb-3 border border-solid border-mb-border rounded-lg">
+                                                <label for="answer-790860-2-1" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente en desacuerdo">😡</span><input id="answer-790860-2-1" name="answer[790860][2]" type="radio" class="sr-only" value="1"></label>
+                                                <label for="answer-790860-2-2" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="En desacuerdo">😟</span><input id="answer-790860-2-2" name="answer[790860][2]" type="radio" class="sr-only" value="2"></label>
+                                                <label for="answer-790860-2-3" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Indeciso">🤔</span><input id="answer-790860-2-3" name="answer[790860][2]" type="radio" class="sr-only" value="3"></label>
+                                                <label for="answer-790860-2-4" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="De acuerdo">🙂</span><input id="answer-790860-2-4" name="answer[790860][2]" type="radio" class="sr-only" value="4"></label>
+                                                <label for="answer-790860-2-5" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente de acuerdo">😀</span><input id="answer-790860-2-5" name="answer[790860][2]" type="radio" class="sr-only" value="5"></label>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset data-question="3">
+                                            <legend class="text-sm font-bold">3 - Resuelve las dudas relacionadas con los contenidos de la asignatura.</legend>
+                                            <div class="flex flex-row items-center justify-evenly w-full mb-3 border border-solid border-mb-border rounded-lg">
+                                                <label for="answer-790860-3-1" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente en desacuerdo">😡</span><input id="answer-790860-3-1" name="answer[790860][3]" type="radio" class="sr-only" value="1"></label>
+                                                <label for="answer-790860-3-2" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="En desacuerdo">😟</span><input id="answer-790860-3-2" name="answer[790860][3]" type="radio" class="sr-only" value="2"></label>
+                                                <label for="answer-790860-3-3" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Indeciso">🤔</span><input id="answer-790860-3-3" name="answer[790860][3]" type="radio" class="sr-only" value="3"></label>
+                                                <label for="answer-790860-3-4" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="De acuerdo">🙂</span><input id="answer-790860-3-4" name="answer[790860][3]" type="radio" class="sr-only" value="4"></label>
+                                                <label for="answer-790860-3-5" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente de acuerdo">😀</span><input id="answer-790860-3-5" name="answer[790860][3]" type="radio" class="sr-only" value="5"></label>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset data-question="4">
+                                            <legend class="text-sm font-bold">4 - Propone ejemplos o ejercicios que vinculan la asignatura con la práctica profesional.</legend>
+                                            <div class="flex flex-row items-center justify-evenly w-full mb-3 border border-solid border-mb-border rounded-lg">
+                                                <label for="answer-790860-4-1" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente en desacuerdo">😡</span><input id="answer-790860-4-1" name="answer[790860][4]" type="radio" class="sr-only" value="1"></label>
+                                                <label for="answer-790860-4-2" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="En desacuerdo">😟</span><input id="answer-790860-4-2" name="answer[790860][4]" type="radio" class="sr-only" value="2"></label>
+                                                <label for="answer-790860-4-3" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Indeciso">🤔</span><input id="answer-790860-4-3" name="answer[790860][4]" type="radio" class="sr-only" value="3"></label>
+                                                <label for="answer-790860-4-4" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="De acuerdo">🙂</span><input id="answer-790860-4-4" name="answer[790860][4]" type="radio" class="sr-only" value="4"></label>
+                                                <label for="answer-790860-4-5" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente de acuerdo">😀</span><input id="answer-790860-4-5" name="answer[790860][4]" type="radio" class="sr-only" value="5"></label>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset data-question="5">
+                                            <legend class="text-sm font-bold">5 - Explica la utilidad de los contenidos teóricos y prácticos para la actividad profesional.</legend>
+                                            <div class="flex flex-row items-center justify-evenly w-full mb-3 border border-solid border-mb-border rounded-lg">
+                                                <label for="answer-790860-5-1" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente en desacuerdo">😡</span><input id="answer-790860-5-1" name="answer[790860][5]" type="radio" class="sr-only" value="1"></label>
+                                                <label for="answer-790860-5-2" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="En desacuerdo">😟</span><input id="answer-790860-5-2" name="answer[790860][5]" type="radio" class="sr-only" value="2"></label>
+                                                <label for="answer-790860-5-3" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Indeciso">🤔</span><input id="answer-790860-5-3" name="answer[790860][5]" type="radio" class="sr-only" value="3"></label>
+                                                <label for="answer-790860-5-4" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="De acuerdo">🙂</span><input id="answer-790860-5-4" name="answer[790860][5]" type="radio" class="sr-only" value="4"></label>
+                                                <label for="answer-790860-5-5" class="mb-0 flex flex-col items-center justify-center px-2 h-10 w-1/5 cursor-pointer has-[:checked]:bg-mb-primary"><span class="text-lg" title="Totalmente de acuerdo">😀</span><input id="answer-790860-5-5" name="answer[790860][5]" type="radio" class="sr-only" value="5"></label>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-right mb-4">
+                            <button type="submit" class="btn btn-primary"><i class="fa fa-arrow-right"></i> Continuar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const aspectos = [
+            "¿Domina los principios, fundamentos y conceptos de la disciplina que imparte en el curso?",
+            "¿Planifica y organiza el proceso de enseñanza-aprendizaje de manera efectiva?",
+            "¿Utiliza recursos didácticos y tecnologías adecuadas para apoyar el curso?",
+            "¿Promueve la participación activa y el pensamiento crítico del estudiantado?",
+            "¿Evalúa el aprendizaje de forma justa, transparente y congruente con los objetivos?",
+            "¿Proporciona retroalimentación oportuna sobre el desempeño académico?",
+            "¿Mantiene una comunicación respetuosa, abierta y constructiva?",
+            "¿Cumple con los horarios, fechas y compromisos establecidos en el programa?",
+            "¿Fomenta la ética profesional y el respeto en el aula?",
+            "¿Adapta las estrategias de enseñanza ante las necesidades del grupo?",
+            "¿Contribuye a tu formación integral y motivación hacia la carrera?"
+        ];
+        let aspectIndex = 0;
+
+        function continuarEvaluacion(e) {
+            e.preventDefault();
+            const fieldsets = document.querySelectorAll('#eval fieldset');
+            const errorsBox = document.getElementById('eval-errors');
+            const errorsList = document.getElementById('eval-errors-list');
+            const successBox = document.getElementById('eval-success');
+            errorsList.innerHTML = '';
+
+            let faltantes = 0;
+            fieldsets.forEach(fs => {
+                const checked = fs.querySelector('input[type="radio"]:checked');
+                if (!checked) {
+                    faltantes++;
+                }
+            });
+
+            if (faltantes > 0) {
+                successBox.style.display = 'none';
+                errorsBox.style.display = 'block';
+                const li = document.createElement('li');
+                li.textContent = `Faltan ${faltantes} reactivo(s) por responder en este aspecto.`;
+                errorsList.appendChild(li);
+                errorsBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                return;
+            }
+
+            errorsBox.style.display = 'none';
+            aspectIndex = (aspectIndex + 1) % aspectos.length;
+            document.getElementById('aspect-counter').textContent = `Aspecto a evaluar: ${aspectIndex + 1} de ${aspectos.length}`;
+            document.getElementById('aspect-title').textContent = aspectos[aspectIndex];
+            document.querySelectorAll('#eval input[type="radio"]').forEach(r => { r.checked = false; });
+            successBox.style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Submenús desplegables del sidebar
+        document.querySelectorAll('.toggle-submenu').forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('data-target');
+                const target = document.getElementById(targetId);
+                if (target) target.classList.toggle('show');
+            });
+        });
+
+        // Dropdown de usuario
+        const userBtn = document.getElementById('user-dropdown-btn');
+        const userMenu = document.getElementById('user-dropdown-menu');
+        if (userBtn && userMenu) {
+            userBtn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                userMenu.classList.toggle('show');
+            });
+            document.addEventListener('click', function () {
+                userMenu.classList.remove('show');
+            });
+        }
+
+        // Ocultar / Mostrar sidebar
+        const sidebar = document.getElementById('main-sidebar');
+        const closeBtn = document.getElementById('close-main-sidebar');
+        const openBtn = document.getElementById('open-main-sidebar');
+        const mobileBtn = document.getElementById('menu-collapse');
+
+        if (closeBtn && openBtn && sidebar) {
+            closeBtn.addEventListener('click', () => {
+                sidebar.classList.remove('in');
+                sidebar.style.display = 'none';
+                openBtn.style.display = 'flex';
+            });
+            openBtn.addEventListener('click', () => {
+                sidebar.classList.add('in');
+                sidebar.style.display = '';
+                openBtn.style.display = 'none';
+            });
+        }
+
+        if (mobileBtn && sidebar) {
+            mobileBtn.addEventListener('click', () => {
+                sidebar.classList.toggle('in');
+                sidebar.style.display = sidebar.style.display === 'block' ? '' : 'block';
+            });
+        }
+
+        // Buscador del menú
+        const searchInput = document.getElementById('menu-search-input');
+        if (searchInput) {
+            searchInput.addEventListener('input', function () {
+                const query = this.value.toLowerCase();
+                document.querySelectorAll('#sidebar-elements > .item').forEach(item => {
+                    const text = item.textContent.toLowerCase();
+                    item.style.display = text.includes(query) ? '' : 'none';
+                });
+            });
+        }
+    </script>
+</body>
+</html>
