@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="robots" content="noindex">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="MindBox">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white-translucent">
+    <meta name="theme-color" content="#5b46b2">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://assets.mindbox.app/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://assets.mindbox.app/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="https://assets.mindbox.app/favicon.ico">
+    <meta name="google" content="notranslate">
+    <title>MindBox</title>
+    <link rel="stylesheet" href="https://assets.mindbox.app/css/app.css?id=0cba320f3871b3e75e8c36646fdb2db6">
+    <style>
+        .collapse { display: none; }
+        .collapse.show { display: block; }
+        .dropdown-menu { display: none; }
+        .dropdown-menu.show { display: block; }
+        .btn-action {
+            align-items: center;
+            background-color: #fff;
+            border-radius: .8rem;
+            column-gap: 10px;
+            display: flex;
+            flex-direction: row;
+            font-weight: 700;
+            justify-content: center;
+            padding: 10px 18px;
+            width: 100%;
+            border: none;
+        }
+        .btn-action:hover {
+            background-color: #f4f3fa;
+            box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-page bg-mb-background" id="main-container">
+        <!-- NAVBAR SUPERIOR -->
+        <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top" id="main-navbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand md:hidden" href="inicio.html">
+                        <img src="https://assets.mindbox.app/img/assets/mindbox_alt.svg" alt="MindBox" class="img-logo">
+                    </a>
+                    <button type="button" id="menu-collapse" class="collapse-btn md:hidden">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+                <div class="hidden md:flex nav-content" id="collapse-menu-1">
+                    <div class="school">
+                        <img src="https://storage.mindbox.app/data/mbid_39/school/pxOkd1rS4stlZO4JcONbF58G2Ug8q9TUWfdnipnJ.jpg" alt="Instituto Tecnológico de Chihuahua" class="logo-school">
+                        <span class="title">Instituto Tecnológico de Chihuahua</span>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown" id="user-dropdown">
+                            <a href="javascript:void(0);" class="dropdown-toggle navbar-text" id="user-dropdown-btn">
+                                <div>
+                                    <img alt="Image" class="opacity-100 img-navbar" src="https://assets.mindbox.app/img/assets/user.svg">
+                                </div>
+                                <span>Rodriguez German Oscar Yram</span>
+                            </a>
+                            <ul class="dropdown-menu" id="user-dropdown-menu">
+                                <li><a href="login.html">Cerrar sesión</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar in" id="main-sidebar" role="navigation">
+            <div class="sidebar-outer">
+                <div class="sidebar-logo">
+                    <img src="https://assets.mindbox.app/img/assets/mindbox.svg" alt="MindBox" class="img-logo">
+                </div>
+                <div class="side-menu">
+                    <div class="relative inline-block text-left w-full" id="menu-search-bar">
+                        <input id="menu-search-input" class="w-full py-1.5 px-3 text-sm border-mb-border rounded-md bg-mb-background text-mb-text-primary leading-tight outline-none focus:ring-mb-primary focus:border-mb-primary" placeholder="Buscar en el menú..." type="text">
+                    </div>
+
+                    <div class="elements" id="sidebar-elements">
+                        <div class="item">
+                            <a href="inicio.html" class="item-dropdown flex flex-row items-center active">
+                                <i class="mr-2 cs-icon home"></i><span>Inicio</span>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="en_curso.html" class="item-dropdown flex flex-row items-center">
+                                <i class="mr-2 cs-icon courses"></i><span>En curso</span>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#collapse-2" class="item-dropdown flex flex-row items-center toggle-submenu" data-target="collapse-2">
+                                <i class="mr-2 cs-icon personal"></i> Mis datos
+                            </a>
+                            <div class="collapse" id="collapse-2">
+                                <div class="item"><a href="datos_generales.html" class="item-dropdown">Datos generales</a></div>
+                                <div class="item"><a href="datos_socioeconomicos.html" class="item-dropdown">Datos socioeconómicos</a></div>
+                                <div class="item"><a href="datos_facturacion.html" class="item-dropdown">Datos de facturación</a></div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <a href="#collapse-3" class="item-dropdown flex flex-row items-center toggle-submenu" data-target="collapse-3">
+                                <i class="mr-2 cs-icon historic"></i> Histórico
+                            </a>
+                            <div class="collapse" id="collapse-3">
+                                <div class="item"><a href="boletas.html" class="item-dropdown">Boletas</a></div>
+                                <div class="item"><a href="kardex.html" class="item-dropdown">Kardex</a></div>
+                                <div class="item"><a href="avance_reticular.html" class="item-dropdown">Avance reticular</a></div>
+                                <div class="item"><a href="actividades_complementarias.html" class="item-dropdown">Actividades complementarias</a></div>
+                                <div class="item"><a href="adeudos.html" class="item-dropdown">Adeudos</a></div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <a href="#collapse-4" class="item-dropdown flex flex-row items-center toggle-submenu" data-target="collapse-4">
+                                <i class="mr-2 cs-icon repeat"></i> Inscripciones
+                            </a>
+                            <div class="collapse" id="collapse-4">
+                                <div class="item"><a href="inscripcion_info.html" class="item-dropdown">Información</a></div>
+                                <div class="item"><a href="grupos_disponibles.html" class="item-dropdown">Grupos disponibles</a></div>
+                                <div class="item"><a href="materias_verano.html" class="item-dropdown">Materias de verano</a></div>
+                                <div class="item"><a href="seleccion_materias.html" class="item-dropdown">Selección de materias</a></div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <a href="#collapse-5" class="item-dropdown flex flex-row items-center toggle-submenu" data-target="collapse-5">
+                                <i class="mr-2 cs-icon applicants"></i> Evaluaciones
+                            </a>
+                            <div class="collapse" id="collapse-5">
+                                <div class="item"><a href="evaluaciones_realizadas.html" class="item-dropdown">Evaluaciones realizadas</a></div>
+                                <div class="item"><a href="evaluacion_docente.html" class="item-dropdown">Evaluación docente</a></div>
+                                <div class="item"><a href="evaluacion_servicios.html" class="item-dropdown">Evaluación de servicios</a></div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <a href="pagos.html" class="item-dropdown flex flex-row items-center">
+                                <i class="mr-2 cs-icon payments"></i><span>Pagos</span>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="constancias.html" class="item-dropdown flex flex-row items-center">
+                                <i class="mr-2 cs-icon documents"></i><span>Constancias</span>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#collapse-8" class="item-dropdown flex flex-row items-center toggle-submenu" data-target="collapse-8">
+                                <i class="mr-2 cs-icon options"></i> Opciones
+                            </a>
+                            <div class="collapse" id="collapse-8">
+                                <div class="item"><a href="cambiar_contrasena.html" class="item-dropdown">Cambiar contraseña</a></div>
+                                <div class="item"><a href="login.html" class="item-dropdown">Cerrar sesión</a></div>
+                            </div>
+                        </div>
+
+                        <div class="item hidden lg:block">
+                            <a href="javascript:void(0);" class="item-dropdown flex flex-row items-center" id="close-main-sidebar">
+                                <i class="mr-2 cs-icon arrowl"></i><span>Ocultar menú</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-copy">
+                <a href="https://mindbox.app" target="_blank">MindBox®</a><br>Todos los derechos reservados © 2026.
+            </div>
+        </aside>
+
+        <a href="javascript:void(0);" class="float-button bottom-left in" id="open-main-sidebar" style="display: none;">
+            <i class="mr-2 cs-icon arrowr white h-3 w-3"></i><span>Mostrar menú</span>
+        </a>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <div class="body-container">
+            <div class="container-fluid">
+                <div class="row mt-2">
+                    <div class="col-xs-12 col-sm-8 offset-sm-2">
+                        <span class="font-bold text-lg">¡Bienvenido</span><br>
+                        <span class="font-bold text-4xl">OSCAR YRAM!</span>
+                    </div>
+                </div>
+
+                <!-- BOTONES MÓVIL -->
+                <div class="row mt-8 md:hidden">
+                    <div class="col">
+                        <button type="button" class="btn-action">
+                            <img src="https://assets.mindbox.app/img/assets/icon_credential.svg" class="h-6 w-6">
+                            <span class="leading-4">Credencial</span>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn-action">
+                            <img src="https://assets.mindbox.app/img/assets/icon_access.svg" class="h-6 w-6">
+                            <span class="leading-4">Acceso</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ACCESOS RÁPIDOS -->
+                <div class="row mt-6">
+                    <div class="col-xs-12 col-sm-8 offset-sm-2">
+                        <div class="row">
+                            <div class="col">
+                                <a href="en_curso.html" class="flex items-center justify-between btn btn-sm btn-light btn-new py-2">
+                                    <span>Mis cursos</span>
+                                    <img src="https://assets.mindbox.app/img/assets/icon_chevron.svg" class="inline-block mr-2" alt="ir">
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="adeudos.html" class="flex items-center justify-between btn btn-sm btn-light btn-new py-2">
+                                    <span>Adeudos</span>
+                                    <img src="https://assets.mindbox.app/img/assets/icon_chevron.svg" class="inline-block mr-2" alt="ir">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="row mt-2">
+                            <div class="col">
+                                <a href="pagos.html" class="flex items-center justify-between btn btn-sm btn-light btn-new py-2">
+                                    <span>Pagos</span>
+                                    <img src="https://assets.mindbox.app/img/assets/icon_chevron.svg" class="inline-block mr-2" alt="ir">
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="boletas.html" class="flex items-center justify-between btn btn-sm btn-light btn-new py-2">
+                                    <span>Boletas</span>
+                                    <img src="https://assets.mindbox.app/img/assets/icon_chevron.svg" class="inline-block mr-2" alt="ir">
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- MENSAJES -->
+                        <div class="row mt-4">
+                            <div class="col-sm-12">
+                                <span class="font-bold text-lg">Mensajes de tu escuela</span>
+                                <p class="text-muted mt-2">Puedes ponerte en contacto con tu escuela si tienes alguna duda.</p>
+                                <div class="panel panel-default mt-2">
+                                    <div class="panel-body">
+                                        <p class="font-bold text-sm">Aún no has enviado ni recibido mensajes, da clic en "Enviar nuevo mensaje" si deseas comunicarte con tu escuela.</p>
+                                    </div>
+                                </div>
+                                <a href="mensajes.html" class="flex items-center justify-center btn btn-sm btn-primary btn-new py-2 mt-3">
+                                    <img src="https://assets.mindbox.app/img/assets/icon_message.svg" class="w-6 h-6 inline-block mr-2" alt="chat">
+                                    <span>Enviar nuevo mensaje</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- AVISOS -->
+                        <div class="row mt-4">
+                            <div class="col-sm-12">
+                                <span class="font-bold text-lg">Avisos</span><br>
+                                <div class="panel panel-default py-2 mt-2">
+                                    <div class="panel-body">
+                                        <div class="ql-container ql-editor">
+                                            <p><strong>Para realizar pagos desde otros bancos diferente a BBVA, sigue estos pasos</strong><span style="color: rgb(230, 0, 0);">.</span></p>
+                                            <ol>
+                                                <li>Es necesario que el ordenante o la persona que paga la reinscripción, entre a su banca en línea o app y de alta la cuenta CLABE <strong>012914002009577713</strong>&nbsp;(Banco BBVA) como si dieran de alta cualquier otra cuenta de terceros de otro banco para hacer SPEI o una transferencia normal.</li>
+                                            </ol>
+                                            <p><br></p>
+                                            <ol>
+                                                <li>En el campo de concepto o referencia (puede llamarse de diferentes formas según el banco desde donde se realice el pago), normalmente es un campo que permite hasta 40 caracteres, debes poner tu referencia generada en el MINDBOX de 20 caracteres. Ejemplo (261MSMX23456789XXXXX) NO USES ESTA REFERENCIA PARA TU PAGO</li>
+                                            </ol>
+                                            <p><br></p>
+                                            <ol>
+                                                <li>Si no pones la referencia de <strong>MINDBOX</strong> exactamente como la genera, si pones menos caracteres, más caracteres o espacios, tu banco procesa la transferencia, pero a los pocos minutos te aparecerá como transferencia devuelta en la aplicación en la que se realizó el pago y por lo tanto no se registrara el pago en <strong>MINDBOX</strong> y no se autorizara tu reinscripción.</li>
+                                            </ol>
+                                            <p><br></p>
+                                            <ol>
+                                                <li>El pago solo será efectivo si se registra correctamente en la cuenta del Instituto Tecnológico, con el importe correspondiente</li>
+                                            </ol>
+                                            <p><br></p>
+                                            <ol>
+                                                <li>Este proceso solo aplica a pagos realizados desde otros bancos diferentes a BBVA</li>
+                                            </ol>
+                                            <p><br></p>
+                                            <p><strong>Correos de coordinadores de la División de Estudios</strong></p>
+                                            <p>dep-admon@chihuahua.tecnm.mx Coordinacion de Administración</p>
+                                            <p>dep-el@chihuahua.tecnm.mx Coordinacion de Ing. Eléctrica</p>
+                                            <p>dep-elmec@chihuahua.tecnm.mx Coordinacion de Ing. Electromecánica</p>
+                                            <p>dep-et@chihuahua.tecnm.mx Coordinacion de Ing. Electrónica</p>
+                                            <p>dep-ind-ead@chihuahua.tecnm.mx Coordinacion de Ing. Industrial EAD</p>
+                                            <p>dep-ind@chihuahua.tecnm.mx Coordinacion de Ing. Industrial</p>
+                                            <p>dep-mat@chihuahua.tecnm.mx Coordinacion de Ing. En Materiales</p>
+                                            <p>dep-mec@chihuahua.tecnm.mx Coordinacion de Ing. Mecánica</p>
+                                            <p>dep-qui@chihuahua.tecnm.mx Coordinacion de Química</p>
+                                            <p><br></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Submenús desplegables del sidebar
+        document.querySelectorAll('.toggle-submenu').forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('data-target');
+                const target = document.getElementById(targetId);
+                if (target) {
+                    target.classList.toggle('show');
+                }
+            });
+        });
+
+        // Dropdown de usuario (Cerrar sesión)
+        const userBtn = document.getElementById('user-dropdown-btn');
+        const userMenu = document.getElementById('user-dropdown-menu');
+        if (userBtn && userMenu) {
+            userBtn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                userMenu.classList.toggle('show');
+            });
+            document.addEventListener('click', function () {
+                userMenu.classList.remove('show');
+            });
+        }
+
+        // Ocultar / Mostrar sidebar en escritorio
+        const sidebar = document.getElementById('main-sidebar');
+        const closeBtn = document.getElementById('close-main-sidebar');
+        const openBtn = document.getElementById('open-main-sidebar');
+        const mobileBtn = document.getElementById('menu-collapse');
+
+        if (closeBtn && openBtn && sidebar) {
+            closeBtn.addEventListener('click', () => {
+                sidebar.classList.remove('in');
+                sidebar.style.display = 'none';
+                openBtn.style.display = 'flex';
+            });
+            openBtn.addEventListener('click', () => {
+                sidebar.classList.add('in');
+                sidebar.style.display = '';
+                openBtn.style.display = 'none';
+            });
+        }
+
+        // Toggle menú en móvil
+        if (mobileBtn && sidebar) {
+            mobileBtn.addEventListener('click', () => {
+                sidebar.classList.toggle('in');
+                if (sidebar.style.display === 'block') {
+                    sidebar.style.display = '';
+                } else {
+                    sidebar.style.display = 'block';
+                }
+            });
+        }
+
+        // Buscador del menú
+        const searchInput = document.getElementById('menu-search-input');
+        if (searchInput) {
+            searchInput.addEventListener('input', function () {
+                const query = this.value.toLowerCase();
+                document.querySelectorAll('#sidebar-elements > .item').forEach(item => {
+                    const text = item.textContent.toLowerCase();
+                    item.style.display = text.includes(query) ? '' : 'none';
+                });
+            });
+        }
+    </script>
+</body>
+</html>
