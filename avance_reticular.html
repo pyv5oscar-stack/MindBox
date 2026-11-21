@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="robots" content="noindex">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="MindBox">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white-translucent">
+    <meta name="theme-color" content="#5b46b2">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://assets.mindbox.app/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://assets.mindbox.app/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="https://assets.mindbox.app/favicon.ico">
+    <meta name="google" content="notranslate">
+    <title>MindBox</title>
+    <link rel="stylesheet" href="https://assets.mindbox.app/css/app.css?id=0cba320f3871b3e75e8c36646fdb2db6">
+    <style>
+        .collapse { display: none; }
+        .collapse.show { display: block; }
+        .dropdown-menu { display: none; }
+        .dropdown-menu.show { display: block; }
+    </style>
+</head>
+<body>
+    <div class="dashboard-page bg-mb-background" id="main-container">
+        <!-- NAVBAR SUPERIOR -->
+        <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top" id="main-navbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand md:hidden" href="inicio.html">
+                        <img src="https://assets.mindbox.app/img/assets/mindbox_alt.svg" alt="MindBox" class="img-logo">
+                    </a>
+                    <button type="button" id="menu-collapse" class="collapse-btn md:hidden">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+                <div class="hidden md:flex nav-content" id="collapse-menu-1">
+                    <div class="school">
+                        <img src="https://storage.mindbox.app/data/mbid_39/school/pxOkd1rS4stlZO4JcONbF58G2Ug8q9TUWfdnipnJ.jpg" alt="Instituto Tecnológico de Chihuahua" class="logo-school">
+                        <span class="title">Instituto Tecnológico de Chihuahua</span>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown" id="user-dropdown">
+                            <a href="javascript:void(0);" class="dropdown-toggle navbar-text" id="user-dropdown-btn">
+                                <div>
+                                    <img alt="Image" class="opacity-100 img-navbar" src="https://assets.mindbox.app/img/assets/user.svg">
+                                </div>
+                                <span>Rodriguez German Oscar Yram</span>
+                            </a>
+                            <ul class="dropdown-menu" id="user-dropdown-menu">
+                                <li><a href="login.html">Cerrar sesión</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar in" id="main-sidebar" role="navigation">
+            <div class="sidebar-outer">
+                <div class="sidebar-logo">
+                    <img src="https://assets.mindbox.app/img/assets/mindbox.svg" alt="MindBox" class="img-logo">
+                </div>
+                <div class="side-menu">
+                    <div class="relative inline-block text-left w-full" id="menu-search-bar">
+                        <input id="menu-search-input" class="w-full py-1.5 px-3 text-sm border-mb-border rounded-md bg-mb-background text-mb-text-primary leading-tight outline-none focus:ring-mb-primary focus:border-mb-primary" placeholder="Buscar en el menú..." type="text">
+                    </div>
+
+                    <div class="elements" id="sidebar-elements">
+                        <div class="item">
+                            <a href="inicio.html" class="item-dropdown flex flex-row items-center">
+                                <i class="mr-2 cs-icon home"></i><span>Inicio</span>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="en_curso.html" class="item-dropdown flex flex-row items-center">
+                                <i class="mr-2 cs-icon courses"></i><span>En curso</span>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#collapse-2" class="item-dropdown flex flex-row items-center toggle-submenu" data-target="collapse-2">
+                                <i class="mr-2 cs-icon personal"></i> Mis datos
+                            </a>
+                            <div class="collapse" id="collapse-2">
+                                <div class="item"><a href="datos_generales.html" class="item-dropdown">Datos generales</a></div>
+                                <div class="item"><a href="datos_socioeconomicos.html" class="item-dropdown">Datos socioeconómicos</a></div>
+                                <div class="item"><a href="datos_facturacion.html" class="item-dropdown">Datos de facturación</a></div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <a href="#collapse-3" class="item-dropdown flex flex-row items-center toggle-submenu" data-target="collapse-3">
+                                <i class="mr-2 cs-icon historic"></i> Histórico
+                            </a>
+                            <div class="collapse show" id="collapse-3">
+                                <div class="item"><a href="boletas.html" class="item-dropdown">Boletas</a></div>
+                                <div class="item"><a href="kardex.html" class="item-dropdown">Kardex</a></div>
+                                <div class="item"><a href="avance_reticular.html" class="item-dropdown active">Avance reticular</a></div>
+                                <div class="item"><a href="actividades_complementarias.html" class="item-dropdown">Actividades complementarias</a></div>
+                                <div class="item"><a href="adeudos.html" class="item-dropdown">Adeudos</a></div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <a href="#collapse-4" class="item-dropdown flex flex-row items-center toggle-submenu" data-target="collapse-4">
+                                <i class="mr-2 cs-icon repeat"></i> Inscripciones
+                            </a>
+                            <div class="collapse" id="collapse-4">
+                                <div class="item"><a href="inscripcion_info.html" class="item-dropdown">Información</a></div>
+                                <div class="item"><a href="grupos_disponibles.html" class="item-dropdown">Grupos disponibles</a></div>
+                                <div class="item"><a href="materias_verano.html" class="item-dropdown">Materias de verano</a></div>
+                                <div class="item"><a href="seleccion_materias.html" class="item-dropdown">Selección de materias</a></div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <a href="#collapse-5" class="item-dropdown flex flex-row items-center toggle-submenu" data-target="collapse-5">
+                                <i class="mr-2 cs-icon applicants"></i> Evaluaciones
+                            </a>
+                            <div class="collapse" id="collapse-5">
+                                <div class="item"><a href="evaluaciones_realizadas.html" class="item-dropdown">Evaluaciones realizadas</a></div>
+                                <div class="item"><a href="evaluacion_docente.html" class="item-dropdown">Evaluación docente</a></div>
+                                <div class="item"><a href="evaluacion_servicios.html" class="item-dropdown">Evaluación de servicios</a></div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <a href="pagos.html" class="item-dropdown flex flex-row items-center">
+                                <i class="mr-2 cs-icon payments"></i><span>Pagos</span>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="constancias.html" class="item-dropdown flex flex-row items-center">
+                                <i class="mr-2 cs-icon documents"></i><span>Constancias</span>
+                            </a>
+                        </div>
+
+                        <div class="item">
+                            <a href="#collapse-8" class="item-dropdown flex flex-row items-center toggle-submenu" data-target="collapse-8">
+                                <i class="mr-2 cs-icon options"></i> Opciones
+                            </a>
+                            <div class="collapse" id="collapse-8">
+                                <div class="item"><a href="cambiar_contrasena.html" class="item-dropdown">Cambiar contraseña</a></div>
+                                <div class="item"><a href="login.html" class="item-dropdown">Cerrar sesión</a></div>
+                            </div>
+                        </div>
+
+                        <div class="item hidden lg:block">
+                            <a href="javascript:void(0);" class="item-dropdown flex flex-row items-center" id="close-main-sidebar">
+                                <i class="mr-2 cs-icon arrowl"></i><span>Ocultar menú</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-copy">
+                <a href="https://mindbox.app" target="_blank">MindBox®</a><br>Todos los derechos reservados © 2026.
+            </div>
+        </aside>
+
+        <a href="javascript:void(0);" class="float-button bottom-left in" id="open-main-sidebar" style="display: none;">
+            <i class="mr-2 cs-icon arrowr white h-3 w-3"></i><span>Mostrar menú</span>
+        </a>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <div class="body-container">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <h5>Avance reticular</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RETÍCULA -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="academicGrid">
+                            <div class="g-head">
+                                <div class="g-col" style="width: 11.1111%;"><p>1ero</p></div>
+                                <div class="g-col" style="width: 11.1111%;"><p>2do</p></div>
+                                <div class="g-col" style="width: 11.1111%;"><p>3ero</p></div>
+                                <div class="g-col" style="width: 11.1111%;"><p>4to</p></div>
+                                <div class="g-col" style="width: 11.1111%;"><p>5to</p></div>
+                                <div class="g-col" style="width: 11.1111%;"><p>6to</p></div>
+                                <div class="g-col" style="width: 11.1111%;"><p>7to</p></div>
+                                <div class="g-col" style="width: 11.1111%;"><p>8avo</p></div>
+                                <div class="g-col" style="width: 11.1111%;"><p>9eno</p></div>
+                            </div>
+
+                            <!-- 1ER SEMESTRE -->
+                            <div class="g-col g-col-1" style="width: 11.1111%;">
+                                <div class="g-row purple"><p><span>AEC-1058</span></p><p title="Química"><small>Química</small></p><p><span>Cursando</span></p></div>
+                                <div class="g-row purple"><p><span>ACF-2301</span></p><p title="Cálculo Diferencial"><small>Cálculo Diferencial</small></p><p><span>Cursando</span></p></div>
+                                <div class="g-row purple"><p><span>ACH-2307</span></p><p title="Taller De Ética"><small>Taller De Ética</small></p><p><span>Cursando</span></p></div>
+                                <div class="g-row purple"><p><span>AEA-1013</span></p><p title="Dibujo Asistido Por Computadora"><small>Dibujo Asistido Por Computadora</small></p><p><span>Cursando</span></p></div>
+                                <div class="g-row purple"><p><span>AEC-1047</span></p><p title="Metrología Y Normalización"><small>Metrología Y Normalización</small></p><p><span>Cursando</span></p></div>
+                                <div class="g-row purple"><p><span>ACC-0906</span></p><p title="Fundamentos De Investigación"><small>Fundamentos De Investigación</small></p><p><span>Cursando</span></p></div>
+                                <div class="g-row empty"></div>
+                            </div>
+
+                            <!-- 2DO SEMESTRE -->
+                            <div class="g-col g-col-2" style="width: 11.1111%;">
+                                <div class="g-row blue"><p><span>ACF-0902</span></p><p title="Cálculo Integral"><small>Cálculo Integral</small></p></div>
+                                <div class="g-row blue"><p><span>ACF-0903</span></p><p title="Álgebra Lineal"><small>Álgebra Lineal</small></p></div>
+                                <div class="g-row blue"><p><span>MTF-1004</span></p><p title="Ciencia E Ingenieria De Materiales"><small>Ciencia E Ingenieria De Materiales</small></p></div>
+                                <div class="g-row blue"><p><span>MTD-1024</span></p><p title="Programación Básica"><small>Programación Básica</small></p></div>
+                                <div class="g-row blue"><p><span>MTC-1014</span></p><p title="Estadística Y Control De Calidad"><small>Estadística Y Control De Calidad</small></p></div>
+                                <div class="g-row blue"><p><span>MTC-1001</span></p><p title="Administración Y Contabilidad"><small>Administración Y Contabilidad</small></p></div>
+                                <div class="g-row blue"><p><span>ACME</span></p><p title="Actividades Complementarias"><small>Actividades Complementarias</small></p></div>
+                            </div>
+
+                            <!-- 3ER SEMESTRE -->
+                            <div class="g-col g-col-3" style="width: 11.1111%;">
+                                <div class="g-row grey"><p><span>ACF-0904</span></p><p title="Cálculo Vectorial"><small>Cálculo Vectorial</small></p></div>
+                                <div class="g-row grey"><p><span>MTC-1022</span></p><p title="Procesos De Fabricación"><small>Procesos De Fabricación</small></p></div>
+                                <div class="g-row grey"><p><span>AEF-1020</span></p><p title="Electromagnetismo"><small>Electromagnetismo</small></p></div>
+                                <div class="g-row grey"><p><span>MTC-1015</span></p><p title="Estática"><small>Estática</small></p></div>
+                                <div class="g-row grey"><p><span>ACE-1046</span></p><p title="Métodos Numéricos"><small>Métodos Numéricos</small></p></div>
+                                <div class="g-row grey"><p><span>ACD-0908</span></p><p title="Desarrollo Sustentable"><small>Desarrollo Sustentable</small></p></div>
+                                <div class="g-row empty"></div>
+                            </div>
+
+                            <!-- 4TO SEMESTRE -->
+                            <div class="g-col g-col-4" style="width: 11.1111%;">
+                                <div class="g-row grey"><p><span>ACF-0905</span></p><p title="Ecuaciones Diferenciales"><small>Ecuaciones Diferenciales</small></p></div>
+                                <div class="g-row grey"><p><span>MTC-1017</span></p><p title="Fundamentos De Termodinámica"><small>Fundamentos De Termodinámica</small></p></div>
+                                <div class="g-row grey"><p><span>MTJ-1020</span></p><p title="Mecanica De Materiales"><small>Mecanica De Materiales</small></p></div>
+                                <div class="g-row grey"><p><span>MTC-1008</span></p><p title="Dinámica"><small>Dinámica</small></p></div>
+                                <div class="g-row grey"><p><span>MTJ-1002</span></p><p title="Analisis De Circuitos Electricos"><small>Analisis De Circuitos Electricos</small></p></div>
+                                <div class="g-row empty"></div>
+                                <div class="g-row empty"></div>
+                            </div>
+
+                            <!-- 5TO SEMESTRE -->
+                            <div class="g-col g-col-5" style="width: 11.1111%;">
+                                <div class="g-row grey"><p><span>MTC1003</span></p><p title="Analisis De Fluidos"><small>Analisis De Fluidos</small></p></div>
+                                <div class="g-row grey"><p><span>MTJ-1011</span></p><p title="Electrónica Analógica"><small>Electrónica Analógica</small></p></div>
+                                <div class="g-row grey"><p><span>ADE-1043</span></p><p title="Mecanismos"><small>Mecanismos</small></p></div>
+                                <div class="g-row grey"><p><span>AEF-1040</span></p><p title="Maquinas Electricas"><small>Maquinas Electricas</small></p></div>
+                                <div class="g-row grey"><p><span>ACA-0909</span></p><p title="Taller De Investigacion I"><small>Taller De Investigacion I</small></p></div>
+                                <div class="g-row empty"></div>
+                                <div class="g-row empty"></div>
+                            </div>
+
+                            <!-- 6TO SEMESTRE -->
+                            <div class="g-col g-col-6" style="width: 11.1111%;">
+                                <div class="g-row grey"><p><span>MTF-1010</span></p><p title="Diseño De Elementos Mecanicos"><small>Diseño De Elementos Mecanicos</small></p></div>
+                                <div class="g-row grey"><p><span>AED-1067</span></p><p title="Vibraciones Mecanicas"><small>Vibraciones Mecanicas</small></p></div>
+                                <div class="g-row grey"><p><span>MTF-1013</span></p><p title="Electronica Digital"><small>Electronica Digital</small></p></div>
+                                <div class="g-row grey"><p><span>AEF-1038</span></p><p title="Instrumentacion"><small>Instrumentacion</small></p></div>
+                                <div class="g-row grey"><p><span>MTJ-1012</span></p><p title="Electronica De Potencia Aplicada"><small>Electronica De Potencia Aplicada</small></p></div>
+                                <div class="g-row grey"><p><span>ACA-0910</span></p><p title="Taller De Investigacion II"><small>Taller De Investigacion II</small></p></div>
+                                <div class="g-row empty"></div>
+                            </div>
+
+                            <!-- 7MO SEMESTRE -->
+                            <div class="g-col g-col-7" style="width: 11.1111%;">
+                                <div class="g-row grey"><p><span>MTD-1019</span></p><p title="Manufactura Avanzada"><small>Manufactura Avanzada</small></p></div>
+                                <div class="g-row grey"><p><span>MTF-1009</span></p><p title="Dinamica De Sistemas"><small>Dinamica De Sistemas</small></p></div>
+                                <div class="g-row grey"><p><span>MTF-1021</span></p><p title="Microcontroladores"><small>Microcontroladores</small></p></div>
+                                <div class="g-row grey"><p><span>MTF-1018</span></p><p title="Mantenimiento"><small>Mantenimiento</small></p></div>
+                                <div class="g-row grey"><p><span>MTG-1023</span></p><p title="Programación Avanzada"><small>Programación Avanzada</small></p></div>
+                                <div class="g-row grey"><p><span>MTG-1005</span></p><p title="Circuitos Hidraulicos Y Neumaticos"><small>Circuitos Hidraulicos Y Neumaticos</small></p></div>
+                                <div class="g-row empty"></div>
+                            </div>
+
+                            <!-- 8VO SEMESTRE -->
+                            <div class="g-col g-col-8" style="width: 11.1111%;">
+                                <div class="g-row grey"><p><span>MTO-1016</span></p><p title="Formulación Y Evaluación De Proyectos"><small>Formulación Y Evaluación De Proyectos</small></p></div>
+                                <div class="g-row grey"><p><span>MTJ-1006</span></p><p title="Control"><small>Control</small></p></div>
+                                <div class="g-row grey"><p><span>MTO-1016</span></p><p title="Controladores Logicos Y Programables"><small>Controladores Logicos Y Programables</small></p></div>
+                                <div class="g-row empty"></div>
+                                <div class="g-row empty"></div>
+                                <div class="g-row empty"></div>
+                                <div class="g-row empty"></div>
+                            </div>
+
+                            <!-- 9NO SEMESTRE -->
+                            <div class="g-col g-col-9" style="width: 11.1111%;">
+                                <div class="g-row grey"><p><span>MTF-1025</span></p><p title="Robótica"><small>Robótica</small></p></div>
+                                <div class="g-row grey"><p><span>SER. SOC.</span></p><p title="Servicio Social"><small>Servicio Social</small></p></div>
+                                <div class="g-row grey"><p><span>RESID.</span></p><p title="Residencia Profesional"><small>Residencia Profesional</small></p></div>
+                                <div class="g-row empty"></div>
+                                <div class="g-row empty"></div>
+                                <div class="g-row empty"></div>
+                                <div class="g-row empty"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CÓDIGO DE COLORES -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <br>
+                        <div class="academicGrid">
+                            <div class="g-head static">
+                                <div class="g-col"><p>Código de colores</p></div>
+                            </div>
+                            <div class="g-col static"><div class="g-row green"><p>Materia acreditada</p></div></div>
+                            <div class="g-col static"><div class="g-row purple"><p>Cursando materia</p></div></div>
+                            <div class="g-col static"><div class="g-row pink"><p>Cursando reprobada</p></div></div>
+                            <div class="g-col static"><div class="g-row brown"><p>Cursando especial</p></div></div>
+                            <div class="g-col static"><div class="g-row yellow"><p>Reprobada</p></div></div>
+                            <div class="g-col static"><div class="g-row orange"><p>A curso especial</p></div></div>
+                            <div class="g-col static"><div class="g-row red"><p>Curso especial reprobado</p></div></div>
+                            <div class="g-col static"><div class="g-row blue"><p>Materia posible a seleccionar</p></div></div>
+                            <div class="g-col static"><div class="g-row grey"><p>Materia no permitida hasta avance</p></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Submenús desplegables del sidebar
+        document.querySelectorAll('.toggle-submenu').forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('data-target');
+                const target = document.getElementById(targetId);
+                if (target) target.classList.toggle('show');
+            });
+        });
+
+        // Dropdown de usuario
+        const userBtn = document.getElementById('user-dropdown-btn');
+        const userMenu = document.getElementById('user-dropdown-menu');
+        if (userBtn && userMenu) {
+            userBtn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                userMenu.classList.toggle('show');
+            });
+            document.addEventListener('click', function () {
+                userMenu.classList.remove('show');
+            });
+        }
+
+        // Ocultar / Mostrar sidebar
+        const sidebar = document.getElementById('main-sidebar');
+        const closeBtn = document.getElementById('close-main-sidebar');
+        const openBtn = document.getElementById('open-main-sidebar');
+        const mobileBtn = document.getElementById('menu-collapse');
+
+        if (closeBtn && openBtn && sidebar) {
+            closeBtn.addEventListener('click', () => {
+                sidebar.classList.remove('in');
+                sidebar.style.display = 'none';
+                openBtn.style.display = 'flex';
+            });
+            openBtn.addEventListener('click', () => {
+                sidebar.classList.add('in');
+                sidebar.style.display = '';
+                openBtn.style.display = 'none';
+            });
+        }
+
+        if (mobileBtn && sidebar) {
+            mobileBtn.addEventListener('click', () => {
+                sidebar.classList.toggle('in');
+                sidebar.style.display = sidebar.style.display === 'block' ? '' : 'block';
+            });
+        }
+
+        // Buscador del menú
+        const searchInput = document.getElementById('menu-search-input');
+        if (searchInput) {
+            searchInput.addEventListener('input', function () {
+                const query = this.value.toLowerCase();
+                document.querySelectorAll('#sidebar-elements > .item').forEach(item => {
+                    const text = item.textContent.toLowerCase();
+                    item.style.display = text.includes(query) ? '' : 'none';
+                });
+            });
+        }
+    </script>
+</body>
+</html>
